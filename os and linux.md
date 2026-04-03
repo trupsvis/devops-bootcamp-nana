@@ -161,6 +161,80 @@ Changing permissions with numeric values
 </details>
 
 ******
+<details>
+<summary> Shell Scripting </summary>
+ <br />
 
+Create and open setup.sh file in vim editor: 
 
+`vim setup.sh`
 
+In setup.sh file:
+
+```sh
+#!/bin/bash
+
+echo "Setup and configure server"
+
+#save file with 
+ESC :wq 
+
+#make file executable
+chmod u+x setup.sh
+
+#execute script
+./setup.sh 
+bash setup.sh
+```
+**Variables :** 
+```sh
+#!/bin/bash
+
+echo "Setup and configure server"
+
+file_name=config.yaml
+config_files=$(ls config)
+
+echo "using file $file_name to configure something"
+echo "here are all configuration files: $config_files"
+
+```
+**Conditions and User Input :**
+
+```sh
+#!/bin/bash
+
+echo "Setup and configure server"
+
+config_dir=$1
+
+if [ -d "$config_dir" ]
+then
+ echo "reading config directory contents"
+ config_files=$(ls "$config_dir")
+else
+ echo "config dir not found. Creating one"
+ mkdir config_dir
+ touch "config_dir/config.sh"
+ echo "config.sh created"
+fi
+
+echo "Reading user input"
+
+read -p "Please enter your password: " user_pwd
+echo "thanks for your password $user_pwd"
+
+echo "all params: $*"
+echo "number of params: $#"
+
+echo "user $1"
+echo "group $2"
+```
+
+</details>
+
+******
+
+<details>
+<summary> Environment Variables </summary>
+ <br />
