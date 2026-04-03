@@ -230,6 +230,9 @@ echo "number of params: $#"
 echo "user $1"
 echo "group $2"
 ```
+Executing the bash file 
+
+bash setup.sh name lastname
 
 </details>
 
@@ -238,3 +241,33 @@ echo "group $2"
 <details>
 <summary> Environment Variables </summary>
  <br />
+
+</details>
+
+ ******
+
+<details>
+<summary> Networking  </summary>
+ <br />
+ Useful Networking Commands:
+
+- `ip` = one of the basic commands
+- `ifconfig` = for configuring and troubleshooting networks. 
+- `netstat` = tool for printing network connections, routing tables
+- `ps aux` =
+ - ps = displays information about a selection of the active processes
+ - a = show processes for all users
+ - u = display the process's user/owner
+ - x = also show processes not attached to a terminal
+
+</details>
+
+ ******
+
+<details>
+<summary> SSH Shell </summary>
+ <br />
+
+</details>
+
+  ******
