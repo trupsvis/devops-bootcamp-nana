@@ -241,6 +241,27 @@ bash setup.sh name lastname
 <details>
 <summary> Environment Variables </summary>
  <br />
+Variables store information. Environment variables are available for the whole environment.
+An environment variable consists of name=value pair.
+    
+- `printenv` = List all environment variables
+- `printenv | less` = List all environment variables with less program
+- `printenv [environment variable]` = Display value of given environment variable, e.g. printenv USER
+- `printenv | grep USER` = Filter environment variables, which have 'USER' in the name
+
+echo $USER = Print value of USER environment variable
+
+Create Environment Variables:
+
+- `export DB_USERNAME` =dbuser = Set environment variable 'DB_USERNAME' with value 'dbuser'
+- `export DB_PASSWORD` =password = Set environment variable 'DB_PASSWORD' with value 'password'
+- `export DB_NAME=mydb` = Set environment variable 'DB_NAME' with value 'mydb'
+- `printenv | grep DB` = Filter environment variables for 'DB' characters
+- `export DB_NAME=newdbname` = Set environment variable 'DB_NAME' to new value 'newdbname'
+
+Delete Environment Variables:
+
+- `unset DB_NAME` = Delete variable with name 'DB_NAME'
 
 </details>
 
@@ -267,6 +288,7 @@ bash setup.sh name lastname
 <details>
 <summary> SSH Shell </summary>
  <br />
+ 
 
 </details>
 
