@@ -56,3 +56,111 @@ Execute commands as superuser
 - sudo [some command] = Allows regular users to run programs with the security privileges of the superuser or root
 
 </details>
+
+******
+
+<details>
+<summary> Package Manager - Installing Software on Linux</summary>
+<br />
+
+APT Package Manager:
+- `sudo apt search [package_name]` = Search for a given package
+- `sudo apt install [package_name]` = Install a given package
+- `sudo apt install [package_name] [package_name2]` = Install multiple packages with one command
+- `sudo apt remove [package_name]` = Remove installed package
+- `sudo apt update` = Updates the package index. Pulls the latest change from the APT repositories
+- 
+</details>
+
+******
+<details>
+<summary> Vim Editor </summary>
+<br />
+
+- `sudo apt install vim` = Search for a given package
+
+Vim Commands:
+- `vim [filename]` = Open file with Vim
+- `Press i key` = Switch to Insert Mode
+- `Press esc key` = Switch to Command Mode
+- `Type :wq` = Write File to disk and quit Vim
+- `Type :q!` = Quit Vim without saving the changes
+- `Type dd` = Delete entire line
+- `Type d10` = Delete next 10 lines
+- `Type u` = Undo
+- `Type A` = Jump to end of line and switch to insert mode
+- `Type 0` = Jump to start of the line
+- `Type $` = Jump to end of the line
+- `Type 12G` = Go to line 12
+- `Type /pattern` = Search for pattern, e.g. `/india`
+    - `Type n` = Jump to next match
+    - `Type N` = Search in opposite direction
+- `Type :%s/old/new` = Replace 'old' with 'new' throughout the file
+
+</details>
+
+******
+
+<details>
+<summary>Linux Accounts & Groups, File Ownership and Permission </summary>
+ <br />
+
+**Locations of Access Control Files:**
+- /etc/passwd
+- /etc/group
+
+- `ls -l` = Print files in a long listing format, you can see ownership and permissions of the file
+
+**Ownership:**
+- `sudo chown [username]:[groupname] [filename]` = Change ownership
+- `sudo chown trupti:admin names.txt` = Change ownership of 'names.txt' file to 'admin'
+- `sudo chgrp devops test.txt` = Make 'devops' group owner of test.txt file
+
+**Possible File Permissions (Symbolic):**
+- r = Read
+- w = Write
+- x = Execute
+- '-' = No permission
+
+**Change File Permissions for different owners**
+
+File Permissions can be changed for:
+- u = Owner
+- g = Group
+- o = Other (all other users)
+
+Minus (-) removes the permission
+- `sudo chmod -x api` = Takes 'execute' permission away for 'api' folder from all owners
+- `sudo chmod g-w config.yaml` = Takes 'write' permission away for 'config.yaml' file from the group 
+
+Plus (+) adds permission
+- `sudo chmod g+x config.yaml` = Add 'execute' permission for 'config.yaml' file to the group 
+- `sudo chmod u+x script.sh` = Add 'execute' permission for 'script.sh' file to the user 
+- `sudo chmod o+x script.sh` = Add 'execute' permission for 'script.sh' file to other 
+
+Change multiple permissions for an owner
+- `sudo chmod g=rwx config.yaml` = Assign 'read write execute' permissions to the group
+- `sudo chmod g=r-- config.yaml` = Assign only 'read' permission to the group
+
+Changing permissions with numeric values
+
+[Absolute vs Symbolic Mode](https://docs.oracle.com/cd/E19455-01/805-7229/6j6q8svd8/)
+
+- 0 = No permission
+- 1 = Execute
+- 2 = Write
+- 3 = Execute + Write
+- 4 = Read
+- 5 = Read + Execute
+- 6 = Read + Write
+- 7 = Read + Write + Execute
+<!-- -->
+- `sudo chmod 777 script.sh` = rwx (Read, Write and Execute) permission for everyone for file 'script.sh'
+- `sudo chmod 740 script.sh` = Give user all permissions (7), give group only read permission (4), give no permission (0)
+
+</details>
+
+******
+
+
+
