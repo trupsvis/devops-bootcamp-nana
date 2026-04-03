@@ -288,7 +288,8 @@ Delete Environment Variables:
 <details>
 <summary> SSH Shell </summary>
  <br />
- 
+
+Connecting via SSH: ssh username@SSHserver_IPAddress
 
 </details>
 
